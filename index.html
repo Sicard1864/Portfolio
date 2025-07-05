@@ -34,6 +34,7 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        #carousel-track { will-change: transform; }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
@@ -73,136 +74,251 @@
     </nav>
 
     <!-- Hero Section -->
-<section id="accueil" class="pt-24 pb-16 gradient-bg text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4, text-indigo-200">Bonjour, je suis Arthur Sicard</h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Développeur Junior Full Stack</h2>
-                <p class="text-lg mb-8 text-indigo-100">
-                    Je suis actuellement élève ingénieur en Informatique & Réseaux à l’<b>ENSISA à Mulhouse</b> (alternance RégionGaz / ÉS Strasbourg).
-                    </p>
-                <div class="flex space-x-4">
-                    <a href="#projets" class="px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition duration-300">
-                        Voir mes projets
-                    </a>
-                    <a href="#contact" class="px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-indigo-600 transition duration-300">
-                        Me contacter
-                    </a>
+    <section id="accueil" class="pt-24 pb-16 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4, text-indigo-200">Bonjour, je suis Arthur Sicard</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Développeur Junior Full Stack</h2>
+                    <p class="text-lg mb-8 text-indigo-100">
+                        Je suis actuellement élève ingénieur en Informatique & Réseaux à l’<b>ENSISA à Mulhouse</b> (alternance RégionGaz / ÉS Strasbourg).
+                        </p>
+                    <div class="flex space-x-4">
+                        <a href="#projets" class="px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition duration-300">
+                            Voir mes projets
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-indigo-600 transition duration-300">
+                            Me contacter
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <!--
-                <div class="relative w-64 h-64 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                    <img src="assets/photo-profil.jpg" class="object-cover object-top w-full h-full" alt="Arthur Sicard">
+                <div class="md:w-1/2 flex justify-center">
+                    <!--
+                    <div class="relative w-64 h-64 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img src="assets/photo-profil.jpg" class="object-cover object-top w-full h-full" alt="Arthur Sicard">
+                    </div>
+                    -->
                 </div>
-                -->
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
+    
     <!-- Projects Section -->
-    <section id="projets" class="py-16 bg-white">
+    <section id="projets" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mes Projets Principaux</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="relative">
 
-                <!-- WebApp Learn -->
-                <a href="https://github.com/Sicard1864/WebAppLearn" target="_blank"
-                class="flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
-                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
-                        <i class="fas fa-graduation-cap text-6xl text-indigo-600"></i>
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Application Web d'Apprentissage</br>
-                            <span class="inline-block text-xs bg-indigo-200 text-indigo-700 rounded px-2 ml-2 align-middle">
-                                <i class="fas fa-calendar-alt text-indigo-600 text-sm mr-1"></i>
-                                juillet 2025 - en cours
-                            </span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            Plateforme de révision par différent type d'exercices : QCM, flashcards, text à trou.<br>
-                            <span class="text-xs text-gray-400">Projet personnel</span>
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Java</span>
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Angular</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Spring Boot</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PostgreSQL</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Docker</span>
-                        </div>
-                        <div class="flex justify-end mt-auto">
-                            <span class="font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> GitHub
-                            </span>
-                        </div>
-                    </div>
-                </a>
+            <!-- Flou progressif à gauche -->
+            <div class="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-24 md:w-32 z-20
+                bg-gradient-to-r from-white/95 via-white/70 to-white/0" hidden md:block></div>
+            <!-- Flou progressif à droite -->
+            <div class="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-24 md:w-32 z-20
+                bg-gradient-to-l from-white/95 via-white/70 to-white/0" hidden md:block></div>
 
-                <!-- Connect4 -->
-                <a href="https://github.com/MarieKoza/Connect4" target="_blank"
-                class="flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
-                    <div class="h-48 bg-green-100 flex items-center justify-center">
-                        <i class="fas fa-chess-board text-6xl text-green-600"></i>
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Puissance 4 | App N-Tiers</br>
-                            <span class="inline-block text-xs bg-green-200 text-green-700 rounded px-2 ml-2 align-middle">
-                                <i class="fas fa-calendar-alt text-green-600 text-sm mr-1"></i>
-                                janvier - février 2025
-                            </span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            Jeu Puissance 4 multijoueur en architecture n-tiers (C#, .NET, Blazor, SQLite).<br>
-                            Développement d’API REST, interface Blazor, gestion de base de données.<br>
-                            <span class="text-xs text-gray-400">Projet d'école, groupe de 4</span>
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">C#</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Blazor</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">SQLite</span>
-                        </div>
-                        <div class="flex justify-end mt-auto">
-                            <span class="font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> GitHub
-                            </span>
-                        </div>
-                    </div>
-                </a>
+            <!-- Flèches toujours au-dessus -->
+            <button id="carousel-left" class="absolute z-30 left-0 top-1/2 -translate-y-1/2 bg-white border border-gray-300 shadow rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100 transition">
+                <i class="fas fa-chevron-left text-xl text-gray-600"></i>
+            </button>
+            <button id="carousel-right" class="absolute z-30 right-0 top-1/2 -translate-y-1/2 bg-white border border-gray-300 shadow rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100 transition">
+                <i class="fas fa-chevron-right text-xl text-gray-600"></i>
+            </button>
 
-                <!-- Autres projets (ex: Messagerie, Blog...) -->
-                <a href="https://github.com/Transformot/web_project" target="_blank"
-                class="flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
-                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
-                        <i class="fas fa-comments text-6xl text-yellow-600"></i>
-                    </div>
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Messagerie instantanée</br>
-                            <span class="inline-block text-xs bg-yellow-200 text-yellow-700 rounded px-2 ml-2 align-middle">
-                                <i class="fas fa-calendar-alt text-yellow-600 text-sm mr-1"></i>
-                                janvier 2023
-                            </span>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            Site de messagerie instantanée avec interface web (Javascript, JQuery, Python/Django).<br>
-                            Travail en groupe, gestion des utilisateurs et communication temps réel.<br>
-                            <span class="text-xs text-gray-400">Projet d'école, groupe de 3</span>
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Javascript</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
-                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">Django</span>
+            <div id="carousel-viewport" class="overflow-hidden w-full py-2 h-[500px] px-2 md:px-6 lg:px-6 relative">
+                <div id="carousel-track" class="flex gap-8 transition-transform duration-500 h-full items-stretch">
+
+                    <!-- WebApp Learn -->
+                    <a href="https://github.com/Sicard1864/WebAppLearn" target="_blank"
+                    class="carousel-card flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mx-auto">
+                        <div class="h-28 bg-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-6xl text-indigo-600"></i>
                         </div>
-                        <div class="flex justify-end mt-auto">
-                            <span class="font-medium flex items-center">
-                                <i class="fab fa-github mr-2"></i> GitHub
-                            </span>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Application Web d'Apprentissage</br>
+                                <span class="inline-block text-xs bg-indigo-200 text-indigo-700 rounded px-2 ml-2 align-middle">
+                                    <i class="fas fa-calendar-alt text-indigo-600 text-sm mr-1"></i>
+                                    juillet 2025 - en cours
+                                </span>
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Plateforme de révision par différent type d'exercices : QCM, flashcards, text à trou.<br>
+                                <span class="text-xs text-gray-400">Projet personnel</span>
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Java</span>
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Angular</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Spring Boot</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Docker</span>
+                            </div>
+                            <div class="flex justify-end mt-auto">
+                                <span class="font-medium flex items-center">
+                                    <i class="fab fa-github mr-2"></i> GitHub
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <!-- Connect4 -->
+                    <a href="https://github.com/MarieKoza/Connect4" target="_blank"
+                    class="carousel-card flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mx-auto">
+                        <div class="h-28 bg-green-100 flex items-center justify-center">
+                            <i class="fas fa-chess-board text-6xl text-green-600"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Puissance 4 | App N-Tiers</br>
+                                <span class="inline-block text-xs bg-green-200 text-green-700 rounded px-2 ml-2 align-middle">
+                                    <i class="fas fa-calendar-alt text-green-600 text-sm mr-1"></i>
+                                    janvier - février 2025
+                                </span>
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Jeu Puissance 4 multijoueur en architecture n-tiers (C#, .NET, Blazor, SQLite).<br>
+                                Développement d’API REST, interface Blazor, gestion de base de données.<br>
+                                <span class="text-xs text-gray-400">Projet d'école, groupe de 4</span>
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">C#</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Blazor</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">SQLite</span>
+                            </div>
+                            <div class="flex justify-end mt-auto">
+                                <span class="font-medium flex items-center">
+                                    <i class="fab fa-github mr-2"></i> GitHub
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Autres projets (ex: Messagerie, Blog...) -->
+                    <a href="https://github.com/Transformot/web_project" target="_blank"
+                    class="carousel-card flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mx-auto">
+                        <div class="h-28 bg-yellow-100 flex items-center justify-center">
+                            <i class="fas fa-comments text-6xl text-yellow-600"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Messagerie instantanée</br>
+                                <span class="inline-block text-xs bg-yellow-200 text-yellow-700 rounded px-2 ml-2 align-middle">
+                                    <i class="fas fa-calendar-alt text-yellow-600 text-sm mr-1"></i>
+                                    janvier 2023
+                                </span>
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Site de messagerie instantanée avec interface web (Javascript, JQuery, Python/Django).<br>
+                                Travail en groupe, gestion des utilisateurs et communication temps réel.<br>
+                                <span class="text-xs text-gray-400">Projet d'école, groupe de 3</span>
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Javascript</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">Django</span>
+                            </div>
+                            <div class="flex justify-end mt-auto">
+                                <span class="font-medium flex items-center">
+                                    <i class="fab fa-github mr-2"></i> GitHub
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    
+                    <!-- WebApp Learn -->
+                    <a href="https://github.com/Sicard1864/WebAppLearn" target="_blank"
+                    class="carousel-card flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mx-auto">
+                        <div class="h-28 bg-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-6xl text-indigo-600"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Application Web d'Apprentissage</br>
+                                <span class="inline-block text-xs bg-indigo-200 text-indigo-700 rounded px-2 ml-2 align-middle">
+                                    <i class="fas fa-calendar-alt text-indigo-600 text-sm mr-1"></i>
+                                    juillet 2025 - en cours
+                                </span>
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Plateforme de révision par différent type d'exercices : QCM, flashcards, text à trou.<br>
+                                <span class="text-xs text-gray-400">Projet personnel</span>
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Java</span>
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Angular</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Spring Boot</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Docker</span>
+                            </div>
+                            <div class="flex justify-end mt-auto">
+                                <span class="font-medium flex items-center">
+                                    <i class="fab fa-github mr-2"></i> GitHub
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Connect4 -->
+                    <a href="https://github.com/MarieKoza/Connect4" target="_blank"
+                    class="carousel-card flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mx-auto">
+                        <div class="h-28 bg-green-100 flex items-center justify-center">
+                            <i class="fas fa-chess-board text-6xl text-green-600"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Puissance 4 | App N-Tiers</br>
+                                <span class="inline-block text-xs bg-green-200 text-green-700 rounded px-2 ml-2 align-middle">
+                                    <i class="fas fa-calendar-alt text-green-600 text-sm mr-1"></i>
+                                    janvier - février 2025
+                                </span>
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Jeu Puissance 4 multijoueur en architecture n-tiers (C#, .NET, Blazor, SQLite).<br>
+                                Développement d’API REST, interface Blazor, gestion de base de données.<br>
+                                <span class="text-xs text-gray-400">Projet d'école, groupe de 4</span>
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">C#</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Blazor</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">SQLite</span>
+                            </div>
+                            <div class="flex justify-end mt-auto">
+                                <span class="font-medium flex items-center">
+                                    <i class="fab fa-github mr-2"></i> GitHub
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Autres projets (ex: Messagerie, Blog...) -->
+                    <a href="https://github.com/Transformot/web_project" target="_blank"
+                    class="carousel-card flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg flex-shrink-0 w-full md:w-1/2 lg:w-1/3 mx-auto">
+                        <div class="h-28 bg-yellow-100 flex items-center justify-center">
+                            <i class="fas fa-comments text-6xl text-yellow-600"></i>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Messagerie instantanée</br>
+                                <span class="inline-block text-xs bg-yellow-200 text-yellow-700 rounded px-2 ml-2 align-middle">
+                                    <i class="fas fa-calendar-alt text-yellow-600 text-sm mr-1"></i>
+                                    janvier 2023
+                                </span>
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Site de messagerie instantanée avec interface web (Javascript, JQuery, Python/Django).<br>
+                                Travail en groupe, gestion des utilisateurs et communication temps réel.<br>
+                                <span class="text-xs text-gray-400">Projet d'école, groupe de 3</span>
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Javascript</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">Django</span>
+                            </div>
+                            <div class="flex justify-end mt-auto">
+                                <span class="font-medium flex items-center">
+                                    <i class="fab fa-github mr-2"></i> GitHub
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -551,6 +667,61 @@
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.getElementById('carousel-track');
+            const cards = track.querySelectorAll('.carousel-card');
+            const leftBtn = document.getElementById('carousel-left');
+            const rightBtn = document.getElementById('carousel-right');
+            const gap = 32; // correspond à gap-8 en px
+            let currentIndex = 0;
+
+            function getCardsPerView() {
+                if (window.innerWidth >= 1024) return 2;   // lg: 2 cartes visibles
+                if (window.innerWidth >= 768)  return 1.5; // md: 1.5 cartes (pour du responsive sympa)
+                return 1;
+            }
+
+            function updateCarousel() {
+                const cardsPerView = getCardsPerView();
+                const cardWidth = cards[0].offsetWidth;
+                const trackGap = gap;
+                const visibleWidth = cardWidth * cardsPerView + (cardsPerView + 1) * trackGap;
+
+                // On veut que l'ensemble soit centré, donc on décale pour que la première carte commence au centre
+                offset = 0;
+                if (cardsPerView == 1.5) {offset = Math.max(0, (track.parentElement.offsetWidth - cardWidth) / 2) - gap;}
+                if (cardsPerView == 2) {offset = Math.max(0, (track.parentElement.offsetWidth - visibleWidth) / 2);}
+
+                // Décalage de l'index
+                // On veut que la 2e carte soit centrée (donc index = 0 => décalé à droite)
+                // Donc le scroll = currentIndex * (cardWidth + gap)
+                track.style.transform = `translateX(${offset - currentIndex * (cardWidth + gap)}px)`;
+
+                // max index pour éviter le scroll à vide (on veut laisser voir les demi-cartes sur les bords)
+                const maxIndex = cards.length-1;
+                leftBtn.disabled = currentIndex === 0;
+                rightBtn.disabled = currentIndex >= maxIndex;
+                leftBtn.classList.toggle("opacity-30", currentIndex === 0);
+                rightBtn.classList.toggle("opacity-30", currentIndex >= maxIndex);
+            }
+
+            leftBtn.addEventListener('click', () => {
+                currentIndex = Math.max(0, currentIndex - 1);
+                updateCarousel();
+            });
+            rightBtn.addEventListener('click', () => {
+                currentIndex++;
+                updateCarousel();
+            });
+
+
+            window.addEventListener('resize', () => {
+                setTimeout(updateCarousel, 300);
+            });
+
+            updateCarousel();
+        });
+
         document.getElementById("year").innerHTML = new Date().getFullYear();
         
         // Mobile menu toggle
