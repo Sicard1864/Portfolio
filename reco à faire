@@ -1,0 +1,25 @@
+sur l'onglet
+- icone + titre
+
+présentation
+- changer présentation, trop chatgpt
+- changer couleur
+- photo (réduire)
+
+projet
+- mettre autre projet + défilement à droite / carousel
+- tag et githut en bas
+
+compétence
+- appropriation en cours =>
+
+<h3 class="text-xl font-semibold mb-2">Application Web d'Apprentissage</br>
+                            <span class="inline-block text-xs bg-indigo-200 text-indigo-700 rounded px-2 ml-2 align-middle">
+                                <i class="fas fa-calendar-alt text-indigo-600 text-base mr-1"></i>
+                                juillet 2025 - en cours
+                            </span>
+                        </h3>
+
+                    <a href="https://github.com/Transformot/web_project" target="_blank" class="text-gray-600 font-medium hover:text-green-600 flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </a>

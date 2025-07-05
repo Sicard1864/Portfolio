@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Sicard | Portfolio</title>
+    <link rel="icon" href="https://favicon.io/favicon-generator/?t=AS&ff=Arial&fs=50&fc=fff&b=4f46e5"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">Arthur Sicard</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="nav-link text-gray-700 hover:text-indigo-600">Accueil</a>
+                    <a href="#projets" class="nav-link text-gray-700 hover:text-indigo-600">Projets</a>
+                    <a href="#competences-techniques" class="nav-link text-gray-700 hover:text-indigo-600">Compétences</a>
+                    <a href="#soft-skills" class="nav-link text-gray-700 hover:text-indigo-600">Soft Skills</a>
+                    <a href="#formation" class="nav-link text-gray-700 hover:text-indigo-600">Formation</a>
+                    <a href="#infoperso" class="nav-link text-gray-700 hover:text-indigo-600">Plus sur moi</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-600">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-500 hover:text-indigo-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="#accueil" class="block py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+            <a href="#projets" class="block py-2 text-gray-700 hover:text-indigo-600">Projets</a>
+            <a href="#competences-techniques" class="block py-2 text-gray-700 hover:text-indigo-600">Compétences</a>
+            <a href="#soft-skills" class="block py-2 text-gray-700 hover:text-indigo-600">Soft Skills</a>
+            <a href="#formation" class="block py-2 text-gray-700 hover:text-indigo-600">Formation</a>
+            <a href="#infoperso" class="nav-link text-gray-700 hover:text-indigo-600">Plus sur moi</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section id="accueil" class="pt-24 pb-16 gradient-bg text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4, text-indigo-200">Bonjour, je suis Arthur Sicard</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Développeur Junior Full Stack</h2>
+                <p class="text-lg mb-8 text-indigo-100">
+                    Je suis actuellement élève ingénieur en Informatique & Réseaux à l’<b>ENSISA à Mulhouse</b> (alternance RégionGaz / ÉS Strasbourg).
+                    </p>
+                <div class="flex space-x-4">
+                    <a href="#projets" class="px-6 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition duration-300">
+                        Voir mes projets
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-indigo-600 transition duration-300">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <!--
+                <div class="relative w-64 h-64 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <img src="assets/photo-profil.jpg" class="object-cover object-top w-full h-full" alt="Arthur Sicard">
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projets" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mes Projets Principaux</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- WebApp Learn -->
+                <a href="https://github.com/Sicard1864/WebAppLearn" target="_blank"
+                class="flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-6xl text-indigo-600"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-semibold mb-2">Application Web d'Apprentissage</br>
+                            <span class="inline-block text-xs bg-indigo-200 text-indigo-700 rounded px-2 ml-2 align-middle">
+                                <i class="fas fa-calendar-alt text-indigo-600 text-sm mr-1"></i>
+                                juillet 2025 - en cours
+                            </span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Plateforme de révision par différent type d'exercices : QCM, flashcards, text à trou.<br>
+                            <span class="text-xs text-gray-400">Projet personnel</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Java</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">Angular</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Spring Boot</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Docker</span>
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <span class="font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Connect4 -->
+                <a href="https://github.com/MarieKoza/Connect4" target="_blank"
+                class="flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-chess-board text-6xl text-green-600"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-semibold mb-2">Puissance 4 | App N-Tiers</br>
+                            <span class="inline-block text-xs bg-green-200 text-green-700 rounded px-2 ml-2 align-middle">
+                                <i class="fas fa-calendar-alt text-green-600 text-sm mr-1"></i>
+                                janvier - février 2025
+                            </span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Jeu Puissance 4 multijoueur en architecture n-tiers (C#, .NET, Blazor, SQLite).<br>
+                            Développement d’API REST, interface Blazor, gestion de base de données.<br>
+                            <span class="text-xs text-gray-400">Projet d'école, groupe de 4</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">C#</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Blazor</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">SQLite</span>
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <span class="font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Autres projets (ex: Messagerie, Blog...) -->
+                <a href="https://github.com/Transformot/web_project" target="_blank"
+                class="flex flex-col h-full project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                    <div class="h-48 bg-yellow-100 flex items-center justify-center">
+                        <i class="fas fa-comments text-6xl text-yellow-600"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-semibold mb-2">Messagerie instantanée</br>
+                            <span class="inline-block text-xs bg-yellow-200 text-yellow-700 rounded px-2 ml-2 align-middle">
+                                <i class="fas fa-calendar-alt text-yellow-600 text-sm mr-1"></i>
+                                janvier 2023
+                            </span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Site de messagerie instantanée avec interface web (Javascript, JQuery, Python/Django).<br>
+                            Travail en groupe, gestion des utilisateurs et communication temps réel.<br>
+                            <span class="text-xs text-gray-400">Projet d'école, groupe de 3</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Javascript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">Django</span>
+                        </div>
+                        <div class="flex justify-end mt-auto">
+                            <span class="font-medium flex items-center">
+                                <i class="fab fa-github mr-2"></i> GitHub
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Technologies maîtrisées (version qualitative) -->
+    <section id="competences-techniques" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mes Compétences Techniques</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Langages de programmation -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-700">Langages & Programmation</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div><strong>Python :</strong> Utilisation en mathématique, BI et IA.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Java, Maven, JUnit :</strong> Utilisation dans le cadre académique et dans un <a href="">projet perso</a>.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>C#, .NET Core, Blazor :</strong> Application dans une architecture n-tier.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>HTML5, CSS3, JavaScript :</strong> Connaissance de base.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>C, C++ :</strong> Vu les bases dans le cadre académique (algorithmique, structures de données).</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bases de données et Infrastructure -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-database text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-700">Bases de Données & Infrastructure</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div><strong>SQL :</strong> Très bonne compréhension des BdD relationnels.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Linux, Bash :</strong> Bonne autonomie, utilisation quotidienne (environnement principal personnel, <i>Debian</i>).</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Docker, Docker-compose, Kubernetes :</strong> Un peu de pratique en école pour orchestrer et déployer des projets.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>NoSQL :</strong> Notions vu en cours et un peu de pratique dessus.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Mainframe :</strong> Base vu en école, utilisation de Cobol, des JCL, ...</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Concepts avancés & autres -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-brain text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-700">Concepts Avancés & Autres</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div><strong>Business Intelligence :</strong> Notions solides, notamment grâce à mes missions chez RégionGaz (Excel, reporting, KPIs).</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Intelligence Artificielle :</strong> Bonnes bases théoriques et pratiques (cours et projets ENSISA).</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Cloud Computing :</strong> Compréhension de concepts clés vu en cours et test de ces concepts.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Cyber sécurité :</strong> Connaissances des règles de sécurité de bases (Crythographie, Protocole, Par-feu, Top 10 OWASP, ...).</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Architecture Réseau :</strong> Base relativement peu solide, étudiée dans mon cursus (ip, protocoles, routeur, modèle OSI).</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Outils & Méthodes -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-700">Outils & Méthodes</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div><strong>Git :</strong> Maîtrise principalement en CLI, utilisation dans des projet en développement collaboratif.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>UML, Conception logicielle :</strong> Bonne compréhension pour modéliser et documenter. Implémentation d'applications MVC et N-Tiers.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <div><strong>Méthodes gestion de projet :</strong> Cours théorique et utilisation en entreprise.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section id="soft-skills" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mes Soft Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-comments text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Écoute active & communication</h3>
+                    <p class="text-gray-600 text-center">
+                        Capacité à écouter et comprendre les besoins.<br>
+                        À l’aise pour vulgariser des informations et collaborer avec des profils variés (techniques ou non).
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-lightbulb text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Gestion de projet</h3>
+                    <p class="text-gray-600 text-center">
+                        Expérience d'alternance : Gantt, carte risque, RASCI, uses cases, réunion, ...</br>
+                        Divers cours et projet : management, conduit réunion, gest. conflit, gest. projet, ...
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-search text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-center">Esprit critique & Prise de recul</h3>
+                    <p class="text-gray-600 text-center">
+                        Analyse rigoureuse des situations et des choix techniques.<br>
+                        Remise en question constructive pour viser l’amélioration continue des projets et des méthodes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section id="formation" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Ma Formation</h2>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8">
+                    <div class="border-l-4 border-indigo-500 pl-4 mb-10">
+                        <h4 class="font-medium text-xl">Diplôme d'ingénieur Informatique & Réseaux</h4>
+                        <p class="text-gray-600 text-sm mb-2">École Nationale Supérieure d'Ingénieurs Sud-Alsace, Mulhouse • 2022 - 2025</p>
+                        <p class="text-gray-700">Alternance chez Électricité de Strasbourg (fournisseur de gaz) • 2023 - 2025:</p>
+                        <p class="text-gray-600 text-sm mb-2">- Gestion de projet pour une migration de SI et pour une fusion d’entreprise.<br>
+                            - Extraction, suivi et pilotage des indicateurs clés de performance.
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4 mb-10">
+                        <h4 class="font-medium text-xl">Classe Préparatoire aux Grandes Écoles filière Physique-Chimie</h4>
+                        <p class="text-gray-600 text-sm mb-2">Lycée Edmond Perrier, Tulle • 2020 - 2022</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 pl-4 mb-2">
+                        <h4 class="font-medium text-xl">Baccalauréat Scientifique spécialité Science de l'Ingénieur, option ISN</h4>
+                        <p class="text-gray-600 text-sm mb-2">Lycée Pierre Caraminot, Égletons • 2017 - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Profile Info Section -->
+    <section id="infoperso" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Plus sur moi</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Hobbies -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-chess text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hobbies</h3>
+                    <p class="text-gray-600">
+                        Escalade et autres activités physique<br>
+                        Jeux vidéo<br>
+                        Lecture (SF, fantasy)<br>
+                        Passion open-source et veille tech
+                    </p>
+                </div>
+                
+                <!-- à Changer / Trouver
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-globe-europe text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Envie de voyager</h3>
+                    <p class="text-gray-600">
+                        Digital nomad pendant 6 mois<br>
+                        Japon, Canada, Scandinavie<br>
+                        Rencontres tech internationales
+                    </p>
+                </div>
+                -->
+                
+                <!-- Aspirations / Objectifs -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-seedling text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Objectifs & Valeurs</h3>
+                    <p class="text-gray-600">
+                        Contribuer à des projets utiles à la société<br>
+                        Rendre l’apprentissage plus efficace<br>
+                        Maîtriser les technos et concepts dont j'ai envie
+                        Continuer d'apprendre 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contactez-moi</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-700">Disponible pour de nouvelles opportunités</h3>
+                    <p class="text-gray-600 mb-8">
+                        Vous souhaitez me contacter pour un quelconque sujet ?<br>
+                        N'hésitez pas à me contacter via le formulaire ou directement par email.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Email</p>
+                                <a href="arthur.sicard18@gmail.com" class="text-gray-700 hover:text-indigo-600">arthur.sicard18@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Téléphone</p>
+                                <a href="tel:+33648754014" class="text-gray-700 hover:text-blue-600">+33 6 48 75 40 14</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Localisation</p>
+                                <p class="text-gray-700">Toulouse, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex space-x-4">
+                        <a href="https://www.linkedin.com/in/arthur-sicard-a41b25251?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByxRlsKblRTiFPmDhsuLhTg%3D%3D" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Sicard1864" target="_blank" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-800 hover:text-white">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold text-indigo-400">Arthur Sicard</span>
+                    <p class="text-gray-400 mt-1">Développeur Junior Full Stack</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/arthur-sicard-a41b25251?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3ByxRlsKblRTiFPmDhsuLhTg%3D%3D" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Sicard1864" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                <p>&copy; <span id="year"></span> Arthur Sicard. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Hide mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate skill bars on scroll
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+
+        // Intersection Observer for skill animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkills();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const skillsSection = document.getElementById('competences');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+        // Toggle course details
+        function toggleCourse(element) {
+            const details = element.querySelector('.course-details');
+            const icon = element.querySelector('.fa-chevron-down');
+            
+            details.classList.toggle('hidden');
+            element.setAttribute('aria-expanded', 
+                element.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
